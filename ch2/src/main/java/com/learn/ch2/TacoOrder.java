@@ -2,6 +2,9 @@ package com.learn.ch2;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 public class TacoOrder {
     private String deliveryName;
@@ -12,4 +15,8 @@ public class TacoOrder {
     private String ccNumber;
     private String ccExpiration;
     private String ccCVV;
+
+    private List<Taco> tacos = new ArrayList<>();
+
+
 }
