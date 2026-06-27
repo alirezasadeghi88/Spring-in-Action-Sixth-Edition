@@ -3,6 +3,7 @@ package com.learn.ch2;
 import ch.qos.logback.core.model.Model;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -46,5 +47,10 @@ public class DesignTacoController {
     @ModelAttribute(name = "taco")
     public Taco taco() {
         return new Taco();
+    }
+
+    @GetMapping
+    public String showDesignForm() {
+        return "design";
     }
 }
