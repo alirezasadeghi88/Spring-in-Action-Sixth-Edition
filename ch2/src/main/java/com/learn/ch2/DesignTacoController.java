@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Controller
@@ -53,4 +54,12 @@ public class DesignTacoController {
     public String showDesignForm() {
         return "design";
     }
+    private Iterable<Ingredient> filterByType(
+            List<Ingredient> ingredients, Type type) {
+        return ingredients
+                .stream()
+                .filter(x -> x.getType().equals(type))
+                .collect(Collectors.toList());
+    }
+
 }
