@@ -37,4 +37,9 @@ public class DesignTacoController {
                     filterByType(ingredients, type));
         }
     }
+
+    @ModelAttribute(name = "tacoOrder")
+    public TacoOrder order() {
+        return new TacoOrder();
+    }
 }
