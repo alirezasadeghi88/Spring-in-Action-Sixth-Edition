@@ -42,4 +42,9 @@ public class DesignTacoController {
     public TacoOrder order() {
         return new TacoOrder();
     }
+
+    @ModelAttribute(name = "taco")
+    public Taco taco() {
+        return new Taco();
+    }
 }
