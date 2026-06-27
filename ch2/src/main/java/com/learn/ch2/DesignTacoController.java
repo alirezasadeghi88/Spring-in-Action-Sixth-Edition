@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,5 +31,6 @@ public class DesignTacoController {
                 new Ingredient("SLSA", "Salsa", Ingredient.Type.SAUCE),
                 new Ingredient("SRCR", "Sour Cream", Ingredient.Type.SAUCE)
         );
+        Type[] types = Ingredient.Type.values();
     }
 }
