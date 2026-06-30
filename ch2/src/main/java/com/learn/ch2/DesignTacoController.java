@@ -34,7 +34,8 @@ public class DesignTacoController {
                 new Ingredient("SRCR", "Sour Cream", Ingredient.Type.SAUCE)
         );
         Ingredient.Type[] types = Ingredient.Type.values();
-        for (Ingredient.Type type : types) {
+        for (
+                Ingredient.Type type : types) {
             model.addText(type.toString().toLowerCase()
             );
         }
